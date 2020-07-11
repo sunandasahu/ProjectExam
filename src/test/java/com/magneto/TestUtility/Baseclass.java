@@ -93,7 +93,7 @@ public static void setup()
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(40,TimeUnit.SECONDS);
 	driver.manage().deleteAllCookies();
-	driver.get(prop.getProperty("url"));
+	driver.get(prop.getProperty("url"));//getting from property file
 	
 	
 }

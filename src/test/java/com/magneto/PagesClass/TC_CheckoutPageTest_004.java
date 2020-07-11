@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -72,8 +73,14 @@ public class TC_CheckoutPageTest_004 extends Baseclass
 		 test.log(LogStatus.PASS, "Entering country name");
 		 cop.clickSaveAddress();
 		 test.log(LogStatus.PASS, "Click on save address");
-//		 cop.clickonLogout();
-//		 test.log(LogStatus.PASS, "Click on LogOut Btn");
+		 
+		 cop.clickonAccountbtn();
+		 Actions a= new Actions(driver);
+		 a.moveToElement(driver.findElement(By.xpath("//a[contains(text(),'Log Out')]"))).build().perform();
+		a.click();
+		 //cop.clickonLogout();
+		 
+		 test.log(LogStatus.PASS, "Click on LogOut Btn");
 	}
 
 }

@@ -60,8 +60,8 @@ public class CheckoutPage extends Baseclass
 	@FindBy(xpath="(//span[contains(text(),'Account')])[1]")
 	private WebElement accountbtn;
 	
-	@FindBy(xpath="//a[contains(text(),'Log Out')]")
-	private WebElement logout;
+//	@FindBy(xpath="//a[contains(text(),'Log Out')]")
+//	private WebElement logout;
 	
 	
 	
@@ -132,10 +132,10 @@ public class CheckoutPage extends Baseclass
 	{
 		accountbtn.click();
 	}
-	public void clickonLogout()
-	{
-		logout.click();
-	}
+//	public void clickonLogout()
+//	{
+//		logout.click();
+//	}
 }
 	
 //	public void CheckoutDetails(String fname,String mname,String lname,String comname,String phn,String fxn,String add1,String add2,String states,String city,String zip)

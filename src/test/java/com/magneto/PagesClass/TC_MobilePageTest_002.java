@@ -39,7 +39,9 @@ public class TC_MobilePageTest_002 extends Baseclass
 	public void mobileLoginTest() throws Exception
 	{
 		loginCred=new TC_LoginPageTest_001();//LOGIN PAGE CRED
-		loginCred.loginPageTest();
+		loginCred.loginPageTest("mounica.sriramoju@gmail.com", "9703202000");
+		//loginCred.loginPageTest(String username, String password);
+		
 		
 	}
 	@Test(priority = 1)
@@ -50,14 +52,15 @@ public class TC_MobilePageTest_002 extends Baseclass
 		//extent.createTest("Getting the mobile info");
 		 mp=new MobilePage();
 		 
-		 
+//			mp.clickonRemoveItem();
+//			org.openqa.selenium.Alert alert1= driver.switchTo().alert();
+//			alert1.accept();
 		 
 	mp.clickmobiletab();
 	
 	test.log(LogStatus.PASS, "Clicking on mobile tab");
 	
-//	mp.clickonRemoveItem();
-//	Alert alert= driver.switchTo().alert();
+
 	
 	mp.searchiphone(prop.getProperty("schiphone"));
 	test.log(LogStatus.PASS, "Searching iphone ");
@@ -93,6 +96,7 @@ public class TC_MobilePageTest_002 extends Baseclass
 		check.checkoutPageTest();//calling method in the checkout page 
 	
 	}
+	
 	 
 	}
 
